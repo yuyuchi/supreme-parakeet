@@ -88,7 +88,7 @@ jobs:
 | --------------------------------------- | ------- | --------- | --------------------------- |
 | A URL with the right text exists        | ✅      | Component | React testing library, Jest |
 | App renders correctly                   | 🙅‍♂️      |           |                             |
-| URL is correct                          | 🙅‍♂️      |           |                             |
+| URL is correct                          | ✅      | Component | React testing library, Jest |
 | App looks as expected on web and mobile | 🙅‍♂️      |           |                             |
 | Front-end performance is at least a B   | 🙅‍♂️      |           |                             |
 | App is secure                           | 🙅‍♂️      |           |                             |
