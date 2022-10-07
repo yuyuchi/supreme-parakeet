@@ -67,20 +67,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies 📦
         #Using npm ci is generally faster than running npm install
-        run: |
-          cd my-app
-          npm ci
+        run: npm ci
       - name: Build the app 🏗
         run: |
-          cd my-app
           npm run build
       - name: Run component tests 🔸
-        run: |
-          cd my-app
-          npm run test
+        run: npm run test
       - name: Start the app 📤
         run: |
-          cd my-app
           npm start &
           npx wait-on --timeout 60000
 ```
@@ -94,7 +88,7 @@ jobs:
 | --------------------------------------- | ------- | --------- | --------------------------- |
 | A URL with the right text exists        | ✅      | Component | React testing library, Jest |
 | App renders correctly                   | 🙅‍♂️      |           |                             |
-| URL is correct                          | 🙅‍♂️      |           |                             |
+| URL is correct                          | ✅      | Component | React testing library, Jest |
 | App looks as expected on web and mobile | 🙅‍♂️      |           |                             |
 | Front-end performance is at least a B   | 🙅‍♂️      |           |                             |
 | App is secure                           | 🙅‍♂️      |           |                             |
