@@ -31,11 +31,17 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - name: Install dependencies 📦
-        run: npm ci
+        run: |
+        cd learn-testing-and-dev &
+        npm ci
       - name: Build the app 🏗️
-        run: npm run build --if-present
+        run: |
+          cd learn-testing-and-dev &
+          npm run build --if-present
       - name: Run component tests 🧪
-        run: npm test
+        run: |
+          cd learn-testing-and-dev &
+          npm test
       - name: Start the app ✨
         run: |
           npm start &

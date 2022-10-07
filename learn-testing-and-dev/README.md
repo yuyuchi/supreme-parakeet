@@ -35,52 +35,6 @@ Now that everything is working, let's push this up to CI so that we can make sur
 ### Create CI Pipeline
 
 - A little about [Github Actions](https://github.com/features/actions)
-- Use the UI to setup a Workflow
-- Paste in the following
-
-```yaml
-name: CI
-env:
-  SCREENER_API_KEY: ${{ secrets.SCREENER_API_KEY }}
-  SAUCE_USERNAME: ${{ secrets.SAUCE_USERNAME }}
-  SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY }}
-
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x]
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: Install dependencies 📦
-        #Using npm ci is generally faster than running npm install
-        run: npm ci
-      - name: Build the app 🏗
-        run: |
-          npm run build
-      - name: Run component tests 🔸
-        run: npm run test
-      - name: Start the app 📤
-        run: |
-          npm start &
-          npx wait-on --timeout 60000
-```
-
-- Add secret variables
-- Commit and watch it 🏃‍♀️
 
 ### Add another test
 
