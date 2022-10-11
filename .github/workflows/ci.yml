@@ -32,17 +32,18 @@ jobs:
           cache: "npm"
       - name: Install dependencies 📦
         run: |
-        cd learn-testing-and-dev &
+        cd learn-testing-and-dev
         npm ci
       - name: Build the app 🏗️
         run: |
-          cd learn-testing-and-dev &
+          cd learn-testing-and-dev
           npm run build --if-present
       - name: Run component tests 🧪
         run: |
-          cd learn-testing-and-dev &
+          cd learn-testing-and-dev
           npm test
       - name: Start the app ✨
         run: |
+          cd learn-testing-and-dev
           npm start &
           npx wait-on --timeout 60000

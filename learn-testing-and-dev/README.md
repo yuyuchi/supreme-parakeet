@@ -1,4 +1,4 @@
-# react-web-app
+# learn-testing-and-dev
 
 A React web app that is built with testing in mind
 
