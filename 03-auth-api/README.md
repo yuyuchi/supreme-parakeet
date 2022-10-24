@@ -18,3 +18,12 @@
 7. Registering our first user
 8. Add positive and negative test case
 9. Making a more robust test
+10. Add body validation logic
+11. Add creation validation test
+12. Extract validation
+13. Logic to avoid duplicate user creation
+14. Encrypt a password
+15. Add login endpoint
+16. Testing the login endpoint
+17. Add JWT
+18. Add posts endpoint
