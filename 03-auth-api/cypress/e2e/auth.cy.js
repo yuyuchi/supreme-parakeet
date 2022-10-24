@@ -75,7 +75,7 @@ describe("/user/register", () => {
       expect(response.status).to.eq(200);
       expect(response.body.name).to.eq("TestName");
       expect(response.body.email).to.eq(dynamicEmail);
-      expect(response.body.password).to.eq("Test0987");
+      expect(response.body.password).to.not.eq("Test0987");
     });
   });
 });
