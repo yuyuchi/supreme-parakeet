@@ -1,0 +1,13 @@
+.App {
+  display: grid;
+  grid-template-columns: minmax(150px, 25%) 1fr;
+}
+.App > .sidebar {
+  height: 100vh;
+  background-color: #eae0da;
+}
+.App > .content {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 1fr auto;
+}

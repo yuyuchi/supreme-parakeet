@@ -1,0 +1,18 @@
+#conversations {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#conversations > li {
+  text-align: center;
+  height: 3rem;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+#conversations > li:hover,
+#conversations > li.active {
+  opacity: 1;
+  background-color: #a0c3d2;
+}
